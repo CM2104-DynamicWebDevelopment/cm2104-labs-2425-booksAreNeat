@@ -21,4 +21,20 @@ app.get('/add', function(req, res){
     res.send("X + Y =" + (x+y));
 });
 
+app.get('calc', function(req, res){
+    var x = parseInt(req.query.x);
+    var y = parseInt(req.query.y);
+    var operator = req.query.operator;
+
+    if (operator = "add"){
+        res.send("The answer is " + (x+y))
+    } else if (operator = "subtract"){
+        res.send("The answer is " + (x-y))
+    } else if (operator = "multiply"){
+        res.send("The answer is " + (x*y))
+    } else {
+        res.send("The answer is " + (x/y))
+    }
+})
+
 app.listen(8080); 
