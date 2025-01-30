@@ -24,7 +24,7 @@ app.get('/add', function(req, res){
 app.get('/calc', function(req, res){
     var x = parseInt(req.query.x);
     var y = parseInt(req.query.y);
-    var operator = toString(req.query.operator);
+    var operator = req.query.operator;
     int = 0;
 
     if (operator == "add"){
