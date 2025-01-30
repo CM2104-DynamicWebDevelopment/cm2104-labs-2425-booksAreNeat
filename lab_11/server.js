@@ -26,11 +26,11 @@ app.get('/calc', function(req, res){
     var y = parseInt(req.query.y);
     var operator = req.query.operator;
 
-    if (operator = add){
+    if (operator.toString() = "add"){
         res.send("The answer is " + (x+y))
-    } else if (operator = subtract){
+    } else if (operator.toString() = "subtract"){
         res.send("The answer is " + (x-y))
-    } else if (operator = multiply){
+    } else if (operator.toString() = "multiply"){
         res.send("The answer is " + (x*y))
     } else {
         res.send("The answer is " + (x/y))
