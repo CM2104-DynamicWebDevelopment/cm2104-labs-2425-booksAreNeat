@@ -16,9 +16,9 @@ app.get('/joke', function(req, res){
 });
 
 app.get('/add', function(req, res){
-    var x = req.query.x;
-    var y = req.query.y;
-    let sum = parseInt("x+y");
+    let x = req.query.x;
+    let y = req.query.y;
+    let sum = parseInt(x+y);
     res.send("X + Y =" + sum);
 });
 
