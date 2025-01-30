@@ -27,11 +27,11 @@ app.get('/calc', function(req, res){
     var operator = toString(req.query.operator);
     int = 0;
 
-    if (operator = "add"){
+    if (operator == "add"){
         int = x+y;
-    } else if (operator = "subtract"){
+    } else if (operator == "subtract"){
         int = x-y;
-    } else if (operator = "multiply"){
+    } else if (operator == "multiply"){
         int = x*y;
     } else {
         int = x/y;
