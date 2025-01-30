@@ -13,7 +13,7 @@ app.get('/test', function(req, res){
 app.get('/joke', function(req, res){
     res.writeHead(200, {'Content-Type': 'text/html'});
     var randomJoke = knockknock()
-    res.end(randomJoke);
+    res.send(randomJoke);
 });
 
 app.listen(8080); 
