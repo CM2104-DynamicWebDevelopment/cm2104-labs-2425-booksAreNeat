@@ -19,7 +19,7 @@ app.get('/add', function(req, res){
     const x = req.query.x;
     const y = req.query.y;
     let sum = parseInt(x+y, 10);
-    res.send("X + Y =" + parseInt(sum));
+    res.send("X + Y =" + sum);
 });
 
 app.listen(8080); 
