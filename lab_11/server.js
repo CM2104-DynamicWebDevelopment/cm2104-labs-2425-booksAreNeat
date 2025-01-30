@@ -25,16 +25,19 @@ app.get('/calc', function(req, res){
     var x = parseInt(req.query.x);
     var y = parseInt(req.query.y);
     var operator = toString(req.query.operator);
+    int = 0;
 
     if (operator = "add"){
-        res.send("The answer is " + (x+y))
+        int = x+y;
     } else if (operator = "subtract"){
-        res.send("The answer is " + (x-y))
+        int = x-y;
     } else if (operator = "multiply"){
-        res.send("The answer is " + (x*y))
+        int = x*y;
     } else {
-        res.send("The answer is " + (x/y))
+        int = x/y;
     }
+
+    res.send("The answer is " + int);
 })
 
 app.listen(8080); 
