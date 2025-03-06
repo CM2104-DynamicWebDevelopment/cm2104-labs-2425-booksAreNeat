@@ -112,6 +112,16 @@ app.get('/logout', function(req, res) {
   res.redirect('/');
 });
 
+app.get('/update', (req,res) => {
+  if(!req.session.loggin){res.redirect('/login');return;}
+
+  const loggedInUser = req.session.user;
+
+  res.render('pages/update',{
+    user: loggedInUser
+  });
+});
+
 //********** POST ROUTES - Deal with processing data from forms ***************************
 
 
