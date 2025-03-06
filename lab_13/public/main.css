@@ -1,0 +1,14 @@
+/**
+ * @Author: Abigail Smith <abigail>
+ * @Date:   13-Feb-2025
+ * @Filename: main.css
+ * @Last modified by:   abigail
+ * @Last modified time: 13-Feb-2025
+ */
+ body{
+    margin:auto;
+  }
+  
+  div{
+    border:1px dotted black
+  }
