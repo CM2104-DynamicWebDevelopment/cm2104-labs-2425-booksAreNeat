@@ -62,7 +62,8 @@ app.get('/', function(req, res) {
     if (err) throw err;
     //the result of the query is sent to the users page as the "users" array
     res.render('pages/users', {
-      users: result
+      users: result,
+      loggedInUser: req.session.user
     })
   });
 
@@ -77,7 +78,8 @@ app.get('/login', function(req, res) {
 app.get('/profile', function(req, res) {
   if(!req.session.loggedin){res.redirect('/login');return;}
   
-  
+
+
   var uname = req.query.username;
   
  
@@ -109,9 +111,6 @@ app.get('/logout', function(req, res) {
   req.session.destroy();
   res.redirect('/');
 });
-
-
-
 
 //********** POST ROUTES - Deal with processing data from forms ***************************
 
@@ -195,3 +194,4 @@ var datatostore = {
     res.redirect('/')
   })
 });
+
